@@ -62,7 +62,7 @@ body {
     height: 100vh;
 }
 
-.intro img {
+.intro .cpu {
     position: absolute;
     width: 250px;
     height: 250px;
