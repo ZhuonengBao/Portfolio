@@ -65,7 +65,7 @@ body {
 .intro .cpu {
     position: absolute;
     width: 250px;
-    height: 250px;
+    height: 251px;
     top: 250px;
     left: 250px;
 }
@@ -78,10 +78,30 @@ body {
         appear 1s steps(30,end);
 }
 
+
+.cpu-line-1-container {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 319.25px;
+    left: 166px;
+    width: 113px;
+    background-color: grey;
+}
+
+.cpu-line-1 {
+    height: 5px;
+    background-color: black;
+}
+
 @keyframes appear {
     from { opacity: 0% }
     to { opacity: 100% }
 }
+
+
+
+
+
 
 
 
