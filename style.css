@@ -48,9 +48,7 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .navbar.respo<div class="circular-progress" data-progress-color="crimson">
-    <div class="inner-circle"></div>
-</div>nsive {position: fixed;}
+    .navbar.responsive {position: fixed;}
     .navbar.responsive .icon {
     position: absolute;
     right: 0;
@@ -71,56 +69,77 @@ body {
     height: 100vh;
 }
 
-.cpu {
-    position: absolute;
+.cpu-container {
+    position: relative;
     top: 250px;
     left: 250px;
+}
+
+.cpu {
+    position: absolute;
     width: 250px;
     height: 250px;
 }
 
-.cpu-line-1-contleft{
+.cpu-left {
     transform: rotate(180deg);
     position: absolute;
-    top: 318px;
-    left: 223px;
     width: 75px;
+    top: 68px;
+    left: -28px;
 }
 
-.cpu-line-1, .cpu-line-2, .cpu-line-3,
-.cpu-line-4, .cpu-line-5 {
+.cpu-left-1, .cpu-left-2, .cpu-left-3,
+.cpu-left-4, .cpu-left-5, 
+.cpu-top-1, .cpu-top-2, .cpu-top-3,
+.cpu-top-4, .cpu-top-5 {
     height: 7px;
     background-color: black;
 }
 
-.cpu-line-5 {
+.cpu-left-5 {
     margin-top: 19px;
 }
-.cpu-line-4 {
+.cpu-left-4 {
     margin-top: 19.5px;
 }
-.cpu-line-3 {
+.cpu-left-3 {
     margin-top: 21px;
 }
-.cpu-line-2 {
+.cpu-left-2 {
     margin-top: 19px;
 }
 
-
-
-.circle1 {
+.circle1-left-cont {
+    transform: rotate(-90deg);
     position: absolute;
-    top: 363px;
-    left: 242px;
+    top: 100px;
+    left: 53px;
 }
 
-.circle2 {
+.circle2-left-cont {
+    transform: rotate(-90deg);
     position: absolute;
-    top: 311px;
-    left: 228px;
+    top: 47px;
+    left: 32px;
 }
 
-.circular-progress {
+.circle1-top-cont {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 18px;
+    left: 70px;
+}
+
+.circle2-top-cont {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 99px;
+    left: 30px;
+}
+
+.circle1-left-prog, .circle2-left-prog,
+.circle1-top-prog, .circle2-top-prog {
     width: var(--progress-bar-width);
     height: var(--progress-bar-height);
     border-radius: 50%;
@@ -130,12 +149,35 @@ body {
     position: relative;
 }
 
+
 .inner-circle {
     position: absolute;
     width: calc(var(--progress-bar-width) - 10px);
     height: calc(var(--progress-bar-height) - 10px);
     border-radius: 50%;
     background-color: var(--background-green);
+}
+
+
+.cpu-top {
+    transform: rotate(-90deg);
+    position: absolute;
+    width: 75px;
+    top: -47px;
+    left: 87.5px;
+}
+
+.cpu-top-1 {
+    margin-bottom: 19px;
+}
+.cpu-top-2 {
+    margin-bottom: 20px;
+}
+.cpu-top-3 {
+    margin-bottom: 20px;
+}
+.cpu-top-4 {
+    margin-bottom: 20px;
 }
 
 

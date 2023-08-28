@@ -27,8 +27,8 @@ function move(elementId, maxWidth) {
   }
 }
 
-function createCircularProgress() {
-  const circularProgress = document.querySelector(".circular-progress");
+function createCircularProgress(circleClass) {
+  const circularProgress = document.querySelector(circleClass);
 
   let startValue = 0,
     endValue = 100,
@@ -48,9 +48,10 @@ function createCircularProgress() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  var elementsToAnimate1 = ["myBar4"];
-  var elementsToAnimate2 = ["myBar2", "myBar5"];
-  var elementsToAnimate3 = ["myBar1", "myBar3"];
+  var elementsToAnimate1 = ["leftBar4", "topBar2", "topBar4"];
+  var elementsToAnimate2 = ["leftBar2", "leftBar5", "topBar3"];
+  var elementsToAnimate3 = ["leftBar1", "leftBar3","topBar1", "topBar5"];
+  var circles = [".circle1-left-prog", ".circle2-left-prog", ".circle1-top-prog", ".circle2-top-prog"]
 
   elementsToAnimate1.forEach(function(elementId) {
     move(elementId, 100);
@@ -64,5 +65,9 @@ document.addEventListener("DOMContentLoaded", function() {
     move(elementId, 50);
   });
 
-  createCircularProgress();
+  circles.forEach(function(circleClass) {
+    setTimeout(function() {
+      createCircularProgress(circleClass);
+    }, 1250);
+  });
 });
