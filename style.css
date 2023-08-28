@@ -1,3 +1,10 @@
+:root {
+    --progress-bar-width: 22px;
+    --progress-bar-height: 22px;
+    --font-size: 2rem;
+    --background-green: #183D3D;
+}
+
 body {
     background-color: #183D3D;
     margin: 0;
@@ -41,7 +48,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    .navbar.responsive {position: fixed;}
+    .navbar.respo<div class="circular-progress" data-progress-color="crimson">
+    <div class="inner-circle"></div>
+</div>nsive {position: fixed;}
     .navbar.responsive .icon {
     position: absolute;
     right: 0;
@@ -62,36 +71,75 @@ body {
     height: 100vh;
 }
 
-.intro .cpu {
+.cpu {
     position: absolute;
-    width: 250px;
-    height: 251px;
     top: 250px;
     left: 250px;
+    width: 250px;
+    height: 250px;
 }
 
-.intro h1 {
-    position: absolute;
-    top: 300px;
-    left: 550px;
-    animation:
-        appear 1s steps(30,end);
-}
-
-
-.cpu-line-1-container {
+.cpu-line-1-contleft{
     transform: rotate(180deg);
     position: absolute;
-    top: 319.25px;
-    left: 166px;
-    width: 113px;
-    background-color: grey;
+    top: 318px;
+    left: 223px;
+    width: 75px;
 }
 
-.cpu-line-1 {
-    height: 5px;
+.cpu-line-1, .cpu-line-2, .cpu-line-3,
+.cpu-line-4, .cpu-line-5 {
+    height: 7px;
     background-color: black;
 }
+
+.cpu-line-5 {
+    margin-top: 19px;
+}
+.cpu-line-4 {
+    margin-top: 19.5px;
+}
+.cpu-line-3 {
+    margin-top: 21px;
+}
+.cpu-line-2 {
+    margin-top: 19px;
+}
+
+
+
+.circle1 {
+    position: absolute;
+    top: 363px;
+    left: 242px;
+}
+
+.circle2 {
+    position: absolute;
+    top: 311px;
+    left: 228px;
+}
+
+.circular-progress {
+    width: var(--progress-bar-width);
+    height: var(--progress-bar-height);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.inner-circle {
+    position: absolute;
+    width: calc(var(--progress-bar-width) - 10px);
+    height: calc(var(--progress-bar-height) - 10px);
+    border-radius: 50%;
+    background-color: var(--background-green);
+}
+
+
+
 
 @keyframes appear {
     from { opacity: 0% }
