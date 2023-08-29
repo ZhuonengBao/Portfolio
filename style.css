@@ -12,11 +12,11 @@ body {
 }
 
 .navbar {
+    width: 100%;
     overflow: hidden;
     background-color: #040D12;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
-    width: 100%;
     z-index: 1000;
 }
 
@@ -71,6 +71,8 @@ body {
 
 .cpu-container {
     position: relative;
+    width: 250px;
+    height: 250px;
     top: 250px;
     left: 250px;
 }
@@ -135,7 +137,7 @@ body {
     transform: rotate(-90deg);
     position: absolute;
     top: 99px;
-    left: 30px;
+    left: 32.5px;
 }
 
 .circle1-left-prog, .circle2-left-prog,
